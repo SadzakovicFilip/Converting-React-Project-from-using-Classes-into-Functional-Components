@@ -1,5 +1,6 @@
 import { Component } from "react";
 
+import CardList from "./components/card-list/card-list.component";
 import "./App.css";
 
 class App extends Component {
@@ -23,9 +24,6 @@ class App extends Component {
         this.setState(
           () => {
             return { monsters: users };
-          },
-          () => {
-            console.log(this.state);
           }
         )
       );
@@ -56,9 +54,10 @@ class App extends Component {
           placeholder="search monsters"
           onChange={onSearchChange}
         />
-        {filterdMonsters.map((item) => {
+        {/* {filterdMonsters.map((item) => {
           return <h1 key={item.id}>{item.name}</h1>;
-        })}
+        })} */}
+        <CardList monsters={filterdMonsters}/>
       </div>
     );
   }
