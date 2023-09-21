@@ -12,6 +12,7 @@ class CardList extends Component {
           const { name, email, id } = item; //destructuring
           return (
             <SingleCard
+              key={id}
               name={name}
               email={email}
               id={id}
