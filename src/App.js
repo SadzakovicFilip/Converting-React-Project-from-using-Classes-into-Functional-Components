@@ -25,7 +25,6 @@ const App = () => {
 
   const onSearchChange = (e) => {
     const searchedString = e.target.value.toLowerCase();
-    console.log(searchedField);
     setSearchedField(searchedString);
   };
 
